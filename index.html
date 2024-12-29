@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce with Cart & Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">The Happeness</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://img-lcwaikiki.mncdn.com/Resource/Images/Banner/eg-2911-20241129_0947.jpg" class="d-block w-100 " alt="Product 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://dfcdn.defacto.com.tr/Mobile/slider_d41c56f1-a5da-4618-9fb7-f4427511baaf_06a5ea28-4a76-4204-9de1-e6de597946a2_DI_296.jpg" class="d-block w-100" alt="Product 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://dfcdn.defacto.com.tr/Mobile/iov-desktop_08c50987-2a1a-445d-a5af-ba296c443185_5e15367f-2d23-4bf9-89bc-b7898e1e1fe3_DI_429.jpg" class="d-block w-100" alt="Product 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <section id="products" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Products</h2>
+      <div class="row">
+        
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://img-lcwaikiki.mncdn.com/mnresize/400/-/pim/productimages/20242/7133824/v2/l_20242-w40952z8-r5b-98-78-92-187_a.jpg" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+              <h5 class="card-title">سويتشيرت رجالي بأكمام طويلة </h5>
+              <p class="card-text">$30.00</p>
+              <button class="btn btn-primary add-to-cart" data-name="Product 1" data-price="20">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://img-lcwaikiki.mncdn.com/mnresize/400/-/pim/productimages/20242/7293110/v1/l_20242-w4bh55z8-rff-99-60-76-186_a.jpg" class="card-img-top" alt="Product 2">
+            <div class="card-body">
+              <h5 class="card-title">طقم بيجامة رجالي</h5>
+              <p class="card-text">$50.00</p>
+              <button class="btn btn-primary add-to-cart" data-name="Product 2" data-price="30">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://img-lcwaikiki.mncdn.com/mnresize/400/-/pim/productimages/20251/7476657/v1/l_20251-s50079z8-h45-98-76-96-189_a.jpg" class="card-img-top" alt="Product 3">
+            <div class="card-body">
+              <h5 class="card-title">بنطلون جينز رجالي</h5>
+              <p class="card-text">$40.00</p>
+              <button class="btn btn-primary add-to-cart" data-name="Product 3" data-price="40">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://img-lcwaikiki.mncdn.com/mnresize/400/-/pim/productimages/20251/7576446/v1/l_20251-s52559z4-g7j_a.jpg" class="card-img-top" alt="Product 4">
+            <div class="card-body">
+              <h5 class="card-title">فستان</h5>
+              <p class="card-text">$70.00</p>
+              <button class="btn btn-primary add-to-cart" data-name="Product 4" data-price="20">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://img-lcwaikiki.mncdn.com/mnresize/400/-/pim/productimages/20242/7208802/v1/l_20242-w46763z4-fux_a.jpg" class="card-img-top" alt="Product 5">
+            <div class="card-body">
+              <h5 class="card-title">طقم بيجامة أطفال</h5>
+              <p class="card-text">$60.00</p>
+              <button class="btn btn-primary add-to-cart" data-name="Product 5" data-price="30">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://img-lcwaikiki.mncdn.com/mnresize/400/-/pim/productimages/20242/7413839/v1/l_20242-w4fb05z4-fdu_a.jpg" class="card-img-top" alt="Product 6">
+
+
+            <div class="card-body">
+              <h5 class="card-title">سويتشيرت</h5>
+              <p class="card-text">$25.00</p>
+              <button class="btn btn-primary add-to-cart" data-name="Product 6" data-price="40">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+    </div>
+  </section>
+
+
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group cart-items"></ul>
+          <p class="mt-3"><strong>Total:</strong> $<span class="cart-total">0</span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Create a Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 The Happeness. All Rights Reserved.</p>
+  </footer>
+
+  <footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4">
+        <h5>About Us</h5>
+        <p>
+          We are a leading e-commerce platform providing top-quality products with a commitment to customer satisfaction. Our mission is to offer the best shopping experience with fast delivery and reliable service.
+        </p>
+      </div>
+
+
+      <div class="col-md-4">
+        <h5>Contact Us</h5>
+        <ul class="list-unstyled">
+          <li><a href="mailto:info@yourcompany.com" class="text-white"><i class="fas fa-envelope"></i> Email: info@yourcompany.com</a></li>
+          <li><a href="tel:+1234567890" class="text-white"><i class="fas fa-phone"></i> Phone: +1 234 567 890</a></li>
+          <li>
+            <a href="https://www.facebook.com/" class="text-white" target="_blank">
+              <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/" class="text-white" target="_blank">
+              <i class="fab fa-twitter"></i> Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" class="text-white" target="_blank">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="col-md-4">
+        <h5>Shipping Information</h5>
+        <p>
+          We offer worldwide shipping with free delivery on orders over $1000. Choose from multiple payment options and enjoy quick, secure delivery to your doorstep.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js">  </script>
+</body>
+</html>
